@@ -110,6 +110,7 @@ class KelolaBarangKeluarController extends Controller
 
         $barang->approved_by = $approverId;
         $barang->is_approved = 2;
+        $barang->alasan      = $alasan;
         $barang->save();
 
         return [true, 'Barang keluar ditandai Tidak Approve'];
