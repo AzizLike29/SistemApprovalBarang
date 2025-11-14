@@ -24,7 +24,7 @@ class AccountController extends Controller
         $user->nama = $request->nama;
         $user->email = $request->email;
         $user->role = $request->role;
-        $user->no_telp = $request->no_telp;;
+        $user->no_telp = $request->no_telp;
 
         if ($request->filled('password')) {
             $user->password = bcrypt($request->password);

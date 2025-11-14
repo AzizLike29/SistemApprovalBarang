@@ -19,13 +19,13 @@
                         </div>
                         <div class="col-md-8">
                             <label class="form-label">Nama Barang</label>
-                            <input type="number" name="jumlah" class="form-control" min="1" required
-                                value="{{ old('jumlah', $row->jumlah) }}">
+                            <input type="text" name="nama_barang" class="form-control" maxlength="255" required
+                                value="{{ old('nama_barang', $row->nama_barang) }}">
                         </div>
                         <div class="col-md-4">
                             <label class="form-label">Jumlah</label>
-                            <input type="text" name="nama_barang" class="form-control" maxlength="255" required
-                                value="{{ old('nama_barang', $row->nama_barang) }}">
+                            <input type="number" name="jumlah" class="form-control" min="1" required
+                                value="{{ old('jumlah', $row->jumlah) }}">
                         </div>
                         <div class="col-md-8">
                             <label class="form-label">Supplier</label>

@@ -40,28 +40,30 @@
                             <label for="telp" class="col-sm-2 col-form-label">No Telepon</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="telp" name="no_telp"
-                                    placeholder="08xxxxxxxxx" pattern="[0-9]+" inputmode="numeric">
+                                    value="{{ old('no_telp', $profile->no_telp) }}" placeholder="08xxxxxxxxx"
+                                    pattern="[0-9]+" inputmode="numeric">
                             </div>
-                        </div>
-                        <div class="mb-3 row">
-                            <label for="role" class="col-sm-2 col-form-label">Role</label>
-                            <div class="col-sm-10">
-                                <select id="role" name="role" class="form-select" required>
-                                    <option value="" disabled
-                                        {{ old('role', $profile->role ?? '') === '' ? 'selected' : '' }}>
-                                        -- Pilih Role --
-                                    </option>
-                                    <option value="admin"
-                                        {{ old('role', $profile->role ?? '') === 'admin' ? 'selected' : '' }}>Admin</option>
-                                    <option value="user"
-                                        {{ old('role', $profile->role ?? '') === 'user' ? 'selected' : '' }}>User</option>
-                                </select>
+                            <div class="mb-3 row">
+                                <label for="role" class="col-sm-2 col-form-label">Role</label>
+                                <div class="col-sm-10">
+                                    <select id="role" name="role" class="form-select" required>
+                                        <option value="" disabled
+                                            {{ old('role', $profile->role ?? '') === '' ? 'selected' : '' }}>
+                                            -- Pilih Role --
+                                        </option>
+                                        <option value="admin"
+                                            {{ old('role', $profile->role ?? '') === 'admin' ? 'selected' : '' }}>Admin
+                                        </option>
+                                        <option value="user"
+                                            {{ old('role', $profile->role ?? '') === 'user' ? 'selected' : '' }}>User
+                                        </option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="d-grid">
-                            <button type="submit" class="btn btn-secondary btn-block">Perbarui</button>
-                        </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-secondary btn-block">Perbarui</button>
+                            </div>
                     </form>
                 @endforeach
             </div>
